@@ -7,7 +7,7 @@
 <h1>{{leagueName}}</h1>
 
 <div class="teams-container">
-  <div class="team-banner" *ngFor="let team of leagueTeams">
+  <div class="team-banner" *ngFor="let team of leagueTeams" [routerLink]="team['Nombre del equipo']">
     {{team["Nombre del equipo"]}}
     <img [src]="team['Logo del Equipo']" [alt]="team['Nombre del equipo']">
   </div>

@@ -1,0 +1,27 @@
+<span class="whereIAm">
+  <a routerLink="/teams">
+      Teams
+  </a>
+  > {{teamName}}
+</span>
+<h1>{{teamName}}</h1>
+
+<div class="players-container">
+  <div class="player-banner" *ngFor="let player of teamPlayers" [routerLink]="team['Nombre del Jugador']">
+    {{player["Nombre del Jugador"]}}
+    <img [src]="player.Avatar" [alt]="player['Nombre del Jugador']">
+  </div>
+</div>
+
+<div class="otherButtons">
+  <a routerLink="/teams">
+    <div class="backToTeams">
+      Back to Teams
+    </div>
+  </a>
+  <a routerLink="newPlayer">
+    <div class="newPlayer">
+      Add a new Player
+    </div>
+  </a>
+</div>

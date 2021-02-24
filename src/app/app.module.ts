@@ -16,6 +16,9 @@ import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { LeaguesComponent } from './pages/leagues/leagues.component';
 import { IndividualLeagueComponent } from './pages/individual-league/individual-league.component';
+import { TeamsComponent } from './pages/teams/teams.component';
+import { IndividualTeamComponent } from './pages/individual-team/individual-team.component';
+import { IndividualPlayerComponent } from './pages/individual-player/individual-player.component';
 
 registerLocaleData(en);
 
@@ -23,7 +26,10 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     LeaguesComponent,
-    IndividualLeagueComponent
+    IndividualLeagueComponent,
+    TeamsComponent,
+    IndividualTeamComponent,
+    IndividualPlayerComponent
   ],
   imports: [
     BrowserModule,
