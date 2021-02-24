@@ -15,13 +15,15 @@ import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { LeaguesComponent } from './pages/leagues/leagues.component';
+import { IndividualLeagueComponent } from './pages/individual-league/individual-league.component';
 
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
     AppComponent,
-    LeaguesComponent
+    LeaguesComponent,
+    IndividualLeagueComponent
   ],
   imports: [
     BrowserModule,
