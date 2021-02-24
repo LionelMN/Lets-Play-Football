@@ -1,1 +1,8 @@
-<p>leagues works!</p>
+<h2>Let's see all the leagues</h2>
+
+<div class="leagues-container">
+  <div class="leagues-banner" *ngFor="let liga of ligas" [routerLink]="liga['Nombre De La Liga']">
+    {{liga['Nombre De La Liga']}}
+    <img [src]="liga['Logo de la Liga']" [alt]="liga['Nombre De La Liga']">
+  </div>
+</div>

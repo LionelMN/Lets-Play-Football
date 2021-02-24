@@ -1,0 +1,49 @@
+.whereIAm{
+  font-size: 10px;
+  margin: 0px 8px;
+  position: relative;
+  top: -20px;
+}
+
+h1{
+  text-align: center;
+}
+
+.teams-container{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  justify-items: center;
+}
+
+.team-banner {
+  font-size: 17px;
+  text-align: center;
+  color: white;
+  height: 75px;
+  width: 90%;
+  background: radial-gradient(circle, #0021ff, #002dcf, #002a9c, #002268, #021736);
+  border-radius: 10px;
+  margin: 0.5rem 0;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 35% 65%;
+  justify-items: center;
+  align-items: center;
+  transition: 1s;
+}
+
+.team-banner:hover {
+  transform: scale(1.1);
+}
+
+.team-banner img{
+  width: 50px;
+  height: 50px;
+}
+
+.otherButtons{
+  text-align: center;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}

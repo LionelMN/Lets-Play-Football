@@ -1,0 +1,27 @@
+<span class="whereIAm">
+  <a routerLink="/leagues">
+      Leagues
+  </a>
+  > {{leagueName}}
+</span>
+<h1>{{leagueName}}</h1>
+
+<div class="teams-container">
+  <div class="team-banner" *ngFor="let team of leagueTeams">
+    {{team["Nombre del equipo"]}}
+    <img [src]="team['Logo del Equipo']" [alt]="team['Nombre del equipo']">
+  </div>
+</div>
+
+<div class="otherButtons">
+  <a routerLink="/leagues">
+    <div class="backToLeagues">
+      Back to Leagues
+    </div>
+  </a>
+  <a routerLink="newTeam">
+    <div class="newTeam">
+      Add a new Team
+    </div>
+  </a>
+</div>
