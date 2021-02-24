@@ -1,1 +1,8 @@
-<p>teams works!</p>
+<h2>Let's see all the teams</h2>
+
+<div class="teams-container">
+  <div class="team-banner" *ngFor="let team of teams" [routerLink]="team['Nombre del equipo']">
+    {{team["Nombre del equipo"]}}
+    <img [src]="team['Logo del Equipo']" [alt]="team['Nombre del equipo']">
+  </div>
+</div>
