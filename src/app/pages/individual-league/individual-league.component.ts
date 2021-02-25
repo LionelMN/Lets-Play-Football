@@ -22,6 +22,8 @@ export class IndividualLeagueComponent implements OnInit {
   liga : LeaguesI;
   leagueName : string = this.route.snapshot.paramMap.get('leagueName');
   leagueTeams : TeamsI[] = [];
+  public showContent = false;
+
 
   getOneLeagues() : void{
     this.leaguesService.getAllLeagues().subscribe(bdLeagues => {
@@ -34,7 +36,10 @@ export class IndividualLeagueComponent implements OnInit {
   getTeams() : void {
     this.teamsService.getAllTeams().subscribe(allTeams => {
       let teams = allTeams;
-      this.leagueTeams = teams.filter(teams => teams.Liga === this.liga.Identificador)
+      this.leagueTeams = teams.filter(teams => teams.Liga === this.liga.Identificador);
+      setTimeout( () => {
+        this.showContent = true;
+      }, 400)
     })
   }
 

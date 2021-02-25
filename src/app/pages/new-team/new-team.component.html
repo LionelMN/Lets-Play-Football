@@ -1,0 +1,19 @@
+<h1>Add new Team</h1>
+
+<div class="spinner-container" *ngIf="!showContent">
+  <app-spinner></app-spinner>
+</div>
+
+<div class="form-container" *ngIf="showContent">
+  <form [formGroup]="teamForm" class="table-row" (ngSubmit)="onSaveForm()">
+    <div class="column"><input type="text" formControlName="Nombre del equipo" placeholder="Nombre del equipo"></div>
+    <div class="column">
+      <select formControlName="Liga">
+        <option [value]="defaultLeagueId.Identificador" *ngIf="defaultLeague" class="defaultTeam" selected="selected">{{defaultLeague}}</option>
+        <option *ngFor="let league of leagues" [value]="league.Identificador">{{league['Nombre De La Liga']}}</option>
+      </select>
+    </div>
+    <div class="column"><input type="text" formControlName="Logo de la Liga" placeholder="Logo de la Liga"></div>
+    <div class="column"><button type="submit" class="btn-send" [disabled]="!teamForm.valid">Send</button></div>
+  </form>
+</div>

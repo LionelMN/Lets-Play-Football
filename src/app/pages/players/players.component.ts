@@ -12,9 +12,16 @@ export class PlayersComponent implements OnInit {
   constructor( private playersService : PlayerService ) { }
 
   players : PlayersI[] = [];
+  public showContent = false;
+
 
   getAllPlayer() : void{
-    this.playersService.getAllPlayers().subscribe(bdPlayers => this.players = bdPlayers);
+    this.playersService.getAllPlayers().subscribe(bdPlayers => {
+      this.players = bdPlayers
+      setTimeout( () => {
+        this.showContent = true;
+      }, 500)
+    });
   }
 
   ngOnInit(): void {

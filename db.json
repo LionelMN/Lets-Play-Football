@@ -26,7 +26,6 @@
       "Logo de la Liga": "https://robohash.org/solutamolestiaesunt.png?size=50x50&set=set1"
     }
   ],
-
   "equipos": [
     {
       "Nombre del equipo": "Dazzlesphere",
@@ -627,9 +626,15 @@
       "id": "be26c85f-1f76-4256-81d7-ebf42f2e711a",
       "Logo del Equipo": "https://robohash.org/dolorinciduntquia.png?size=250x250&set=set1",
       "Liga": "2b44c97f-c1f8-4731-a627-4bdedcca7ece"
+    },
+    {
+      "Nombre del equipo": "Laura F.C",
+      "Logo de la Liga": "",
+      "Liga": "2b44c97f-c1f8-4731-a627-4bdedcca7ece",
+      "img": "default.png",
+      "id": "4-wS-GL"
     }
   ],
-
   "jugadores": [
     {
       "Nombre del Jugador": "Auguste Penwarden",
@@ -7830,6 +7835,48 @@
       "id": "cdd1ada9-4128-4233-8ba4-5120c31668af",
       "Avatar": "https://robohash.org/inutminus.png?size=250x250&set=set1",
       "teamId": "be26c85f-1f76-4256-81d7-ebf42f2e711a"
+    },
+    {
+      "Nombre del Jugador": "Prueba",
+      "Avatar": "",
+      "teamId": "8154f4cb-246b-4bf9-bc64-51f8661b6781",
+      "img": "default.png",
+      "id": "p8f9DV4"
+    },
+    {
+      "Nombre del Jugador": "as",
+      "Avatar": "",
+      "teamId": "as",
+      "img": "default.png",
+      "id": "a_-i5oH"
+    },
+    {
+      "Nombre del Jugador": "Prueba con select",
+      "Avatar": "",
+      "teamId": "8154f4cb-246b-4bf9-bc64-51f8661b6781",
+      "img": "default.png",
+      "id": "YhL72o8"
+    },
+    {
+      "Nombre del Jugador": "Lau",
+      "Avatar": "",
+      "teamId": "7cbd9c6d-e002-4d40-8bfa-f07e943f17a4",
+      "img": "default.png",
+      "id": "71qo242"
+    },
+    {
+      "Nombre del Jugador": "as",
+      "Avatar": "",
+      "teamId": "Dazzlesphere",
+      "img": "default.png",
+      "id": "ClnFYAz"
+    },
+    {
+      "Nombre del Jugador": "qw",
+      "Avatar": "",
+      "teamId": "Dazzlesphere",
+      "img": "default.png",
+      "id": "_5QbQKZ"
     }
   ]
 }
