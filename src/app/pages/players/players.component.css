@@ -1,0 +1,36 @@
+h2{
+  text-align: center;
+}
+
+.players-container{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  justify-items: center;
+}
+
+.player-banner {
+  font-size: 15px;
+  text-align: center;
+  color: white;
+  height: 6.5rem;
+  width: 90%;
+  background: radial-gradient(circle, #0021ff, #002dcf, #002a9c, #002268, #021736);
+  border-radius: 10px;
+  margin: 0.5rem 0;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 50% 50%;
+  justify-items: center;
+  align-items: center;
+  transition: 1s;
+}
+
+.player-banner:hover {
+  transform: scale(1.1);
+}
+
+.player-banner img{
+  width: 40px;
+  height: 40px;
+}

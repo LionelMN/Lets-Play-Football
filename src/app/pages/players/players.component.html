@@ -1,0 +1,9 @@
+<h2>Let's see all the players</h2>
+
+<div class="players-container">
+  <div class="player-banner" *ngFor="let player of players" [routerLink]="player['Nombre del Jugador']">
+    {{player['Nombre del Jugador']}}
+    <img [src]="player.Avatar" [alt]="player['Nombre del Jugador']">
+  </div>
+</div>
+

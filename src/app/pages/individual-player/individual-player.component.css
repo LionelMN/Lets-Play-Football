@@ -1,0 +1,30 @@
+.whereIAm{
+  font-size: 10px;
+  margin: 0px 8px;
+  position: relative;
+  top: -20px;
+}
+
+h1{
+  text-align: center;
+}
+
+
+.player-banner {
+  font-size: 15px;
+  text-align: center;
+  color: white;
+  height: 6.5rem;
+  width: 90%;
+  margin: 0.5rem 0;
+  justify-items: center;
+  align-items: center;
+  transition: 1s;
+}
+
+
+.otherButtons{
+  text-align: center;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
