@@ -19,6 +19,7 @@ import { IndividualLeagueComponent } from './pages/individual-league/individual-
 import { TeamsComponent } from './pages/teams/teams.component';
 import { IndividualTeamComponent } from './pages/individual-team/individual-team.component';
 import { IndividualPlayerComponent } from './pages/individual-player/individual-player.component';
+import { PlayersComponent } from './pages/players/players.component';
 
 registerLocaleData(en);
 
@@ -29,7 +30,8 @@ registerLocaleData(en);
     IndividualLeagueComponent,
     TeamsComponent,
     IndividualTeamComponent,
-    IndividualPlayerComponent
+    IndividualPlayerComponent,
+    PlayersComponent
   ],
   imports: [
     BrowserModule,

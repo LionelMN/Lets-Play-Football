@@ -7,7 +7,7 @@
 <h1>{{teamName}}</h1>
 
 <div class="players-container">
-  <div class="player-banner" *ngFor="let player of teamPlayers" [routerLink]="team['Nombre del Jugador']">
+  <div class="player-banner" *ngFor="let player of teamPlayers" [routerLink]="player['Nombre del Jugador']">
     {{player["Nombre del Jugador"]}}
     <img [src]="player.Avatar" [alt]="player['Nombre del Jugador']">
   </div>
