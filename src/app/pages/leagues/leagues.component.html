@@ -1,6 +1,10 @@
 <h2>Let's see all the leagues</h2>
 
-<div class="leagues-container">
+<div class="spinner-container" *ngIf="!showContent">
+  <app-spinner></app-spinner>
+</div>
+
+<div class="leagues-container" *ngIf="showContent">
   <div class="leagues-banner" *ngFor="let liga of ligas" [routerLink]="liga['Nombre De La Liga']">
     {{liga['Nombre De La Liga']}}
     <img [src]="liga['Logo de la Liga']" [alt]="liga['Nombre De La Liga']">

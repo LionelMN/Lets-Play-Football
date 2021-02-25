@@ -7,7 +7,7 @@ import { IconsProviderModule } from './icons-provider.module';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzButtonModule } from 'ng-zorro-antd/button';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NZ_I18N } from 'ng-zorro-antd/i18n';
@@ -20,6 +20,10 @@ import { TeamsComponent } from './pages/teams/teams.component';
 import { IndividualTeamComponent } from './pages/individual-team/individual-team.component';
 import { IndividualPlayerComponent } from './pages/individual-player/individual-player.component';
 import { PlayersComponent } from './pages/players/players.component';
+import { NewPlayerComponent } from './pages/new-player/new-player.component';
+import { NewTeamComponent } from './pages/new-team/new-team.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
+
 
 registerLocaleData(en);
 
@@ -31,7 +35,10 @@ registerLocaleData(en);
     TeamsComponent,
     IndividualTeamComponent,
     IndividualPlayerComponent,
-    PlayersComponent
+    PlayersComponent,
+    NewPlayerComponent,
+    NewTeamComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +49,9 @@ registerLocaleData(en);
     NzButtonModule,
     FormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]

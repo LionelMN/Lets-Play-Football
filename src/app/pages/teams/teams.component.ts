@@ -11,10 +11,16 @@ export class TeamsComponent implements OnInit {
 
   constructor( private teamsService : TeamsServiceService ) { }
 
-  teams : TeamsI[] = []
+  teams : TeamsI[] = [];
+  public showContent = false;
 
   getAllTeams() : void {
-    this.teamsService.getAllTeams().subscribe(allTeams => this.teams = allTeams)
+    this.teamsService.getAllTeams().subscribe(allTeams => {
+      this.teams = allTeams;
+      setTimeout( () => {
+        this.showContent = true;
+      }, 400)
+    })
   }
 
   ngOnInit(): void {

@@ -22,6 +22,8 @@ export class IndividualTeamComponent implements OnInit {
   team : TeamsI;
   teamName : string = this.route.snapshot.paramMap.get('teamName');
   teamPlayers : PlayersI[] = [];
+  public showContent = false;
+
 
   getOneTeam() : void{
     this.teamsService.getAllTeams().subscribe(bdTeams => {
@@ -34,7 +36,10 @@ export class IndividualTeamComponent implements OnInit {
   getPlayers() : void {
     this.playersService.getAllPlayers().subscribe(allPlayers => {
       let players = allPlayers;
-      this.teamPlayers = players.filter(players => players.teamId === this.team.id)
+      this.teamPlayers = players.filter(players => players.teamId === this.team.id);
+      setTimeout( () => {
+        this.showContent = true;
+      }, 400)
     })
   }
 

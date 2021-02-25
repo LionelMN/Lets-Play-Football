@@ -1,0 +1,10 @@
+.welcome-header{
+  display: grid;
+  justify-items: center;
+}
+
+.welcome-container{
+  text-align: center;
+  font-size: 16px;
+  padding: 1rem 1.5rem;
+}

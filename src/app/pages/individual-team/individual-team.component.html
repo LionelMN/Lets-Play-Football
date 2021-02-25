@@ -6,22 +6,28 @@
 </span>
 <h1>{{teamName}}</h1>
 
-<div class="players-container">
-  <div class="player-banner" *ngFor="let player of teamPlayers" [routerLink]="player['Nombre del Jugador']">
-    {{player["Nombre del Jugador"]}}
-    <img [src]="player.Avatar" [alt]="player['Nombre del Jugador']">
-  </div>
+<div class="spinner-container" *ngIf="!showContent">
+  <app-spinner></app-spinner>
 </div>
 
-<div class="otherButtons">
-  <a routerLink="/teams">
-    <div class="backToTeams">
-      Back to Teams
+<div class="view-container"  *ngIf="showContent">
+  <div class="players-container">
+    <div class="player-banner" *ngFor="let player of teamPlayers" [routerLink]="player['Nombre del Jugador']">
+      {{player["Nombre del Jugador"]}}
+      <img [src]="player.Avatar" [alt]="player['Nombre del Jugador']">
     </div>
-  </a>
-  <a routerLink="newPlayer">
-    <div class="newPlayer">
-      Add a new Player
-    </div>
-  </a>
+  </div>
+
+  <div class="otherButtons">
+    <a routerLink="/teams">
+      <div class="backToTeams">
+        Back to Teams
+      </div>
+    </a>
+    <a routerLink="/new/addPlayer" [queryParams]="{teamId : team['Nombre del equipo']}">
+      <div class="newPlayer">
+        Add a new Player
+      </div>
+    </a>
+  </div>
 </div>

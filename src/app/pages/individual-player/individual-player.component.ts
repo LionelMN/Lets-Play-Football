@@ -19,11 +19,15 @@ export class IndividualPlayerComponent implements OnInit {
   players : PlayersI[] = [];
   player : PlayersI;
   playerName : string = this.route.snapshot.paramMap.get('playerName');
+  public showContent = false;
 
   getOnePlayer() : void{
     this.playersService.getAllPlayers().subscribe(bdPlayers => {
       this.players = bdPlayers
-      this.player = this.players.find(player => player['Nombre del Jugador'] === this.playerName)
+      this.player = this.players.find(player => player['Nombre del Jugador'] === this.playerName);
+      setTimeout( () => {
+        this.showContent = true;
+      }, 400)
     });
   }
 

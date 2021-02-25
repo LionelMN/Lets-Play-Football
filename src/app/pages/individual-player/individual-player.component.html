@@ -6,9 +6,12 @@
 </span>
 <h1>{{playerName}}</h1>
 
+<div class="spinner-container" *ngIf="!showContent">
+  <app-spinner></app-spinner>
+</div>
 
+<div class="view-container"  *ngIf="showContent">
   <div class="player-banner">
     <img [src]="player.Avatar" [alt]="player['Nombre del Jugador']">
   </div>
-
-
+</div>

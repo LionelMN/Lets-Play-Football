@@ -12,9 +12,16 @@ export class LeaguesComponent implements OnInit {
   constructor( private leaguesService: LeaguesService) { }
 
   ligas : LeaguesI[] = [];
+  public showContent = false;
+
 
   getAllLeagues() : void{
-    this.leaguesService.getAllLeagues().subscribe(bdLeagues => this.ligas = bdLeagues);
+    this.leaguesService.getAllLeagues().subscribe(bdLeagues => {
+      this.ligas = bdLeagues;
+      setTimeout( () => {
+        this.showContent = true;
+      }, 200)
+    });
   }
 
   ngOnInit(): void {
