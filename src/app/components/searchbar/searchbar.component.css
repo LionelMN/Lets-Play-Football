@@ -1,0 +1,21 @@
+.searchbar{
+  height: 23px;
+  position: relative;
+  left: 50px;
+  top: -45px;
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 25% 35% 10%;
+  align-items: center;
+}
+
+.searchbar input{
+  height: 23px;
+  width: 100px;
+  border: 1px solid;
+  border-left: none;
+}
+
+.searchbar a {
+  width: 23px;
+}

@@ -1,0 +1,8 @@
+<div class="searchbar" [formGroup]="searchForm" (focusout)="buildLink()">
+  <select formControlName="searchCategory">
+    <option value="teams">Teams</option>
+    <option value="players">Players</option>
+  </select>
+  <input type="text" formControlName="searchItem" />
+  <a [routerLink]="link" (click)="onResetForm()">🔎</a>
+</div>
