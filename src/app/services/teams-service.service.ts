@@ -14,12 +14,16 @@ export class TeamsServiceService {
     return this.http.get(`http://192.168.0.29:3000/equipos`) as Observable<TeamsI[]>
   }
 
+  getOneTeam(teamName) : Observable<TeamsI>{
+    return this.http.get(`http://192.168.0.29:3000/equipos/${teamName}`) as Observable<TeamsI>
+  }
+
   createOneTeam(newTeam) : Observable<TeamsI> {
     return this.http.post(`http://192.168.0.29:3000/equipos`, newTeam) as Observable<TeamsI>
   }
 
   editOneTeam(team) : Observable<TeamsI> {
-    return this.http.patch(`http://192.168.0.29:3000/equipos/${team}`, team['Nombre del equipo']) as Observable<TeamsI>
+    return this.http.patch(`http://192.168.0.29:3000/equipos/${team['Nombre del equipo']}`, team) as Observable<TeamsI>
   }
 
   deleteOneTeam(teamName) : Observable<TeamsI> {

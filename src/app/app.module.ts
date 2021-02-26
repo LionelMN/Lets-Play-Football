@@ -24,6 +24,7 @@ import { NewPlayerComponent } from './pages/new-player/new-player.component';
 import { NewTeamComponent } from './pages/new-team/new-team.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
+import { EditTeamComponent } from './pages/edit-team/edit-team.component';
 
 
 registerLocaleData(en);
@@ -40,7 +41,8 @@ registerLocaleData(en);
     NewPlayerComponent,
     NewTeamComponent,
     SpinnerComponent,
-    SearchbarComponent
+    SearchbarComponent,
+    EditTeamComponent
   ],
   imports: [
     BrowserModule,
