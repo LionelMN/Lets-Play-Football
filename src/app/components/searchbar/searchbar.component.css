@@ -19,3 +19,12 @@
 .searchbar a {
   width: 23px;
 }
+
+.predictive-options{
+  width: 75%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 100%;
+  background: white;
+/*   z-index: 2;
+ */}
