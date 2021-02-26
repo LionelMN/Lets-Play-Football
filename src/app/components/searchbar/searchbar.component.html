@@ -1,8 +1,24 @@
-<div class="searchbar" [formGroup]="searchForm" (focusout)="buildLink()">
-  <select formControlName="searchCategory">
-    <option value="teams">Teams</option>
-    <option value="players">Players</option>
-  </select>
-  <input type="text" formControlName="searchItem" />
-  <a [routerLink]="link" (click)="onResetForm()">🔎</a>
+<div class="searchbar-container">
+  <div class="searchbar" [formGroup]="searchForm" (focusout)="buildLink()">
+    <select formControlName="searchCategory">
+      <option value="teams">Teams</option>
+      <option value="players" >Players</option>
+    </select>
+    <input type="text" formControlName="searchItem" [(ngModel)]="searchForm.value.searchItem" (focus)="onActivateSearch()" (focusout)="onDeactivateSearch()" (ngModelChange)="filterItems(searchForm.value.searchItem)"/>
+    <a [routerLink]="link" (click)="onResetForm()">🔎</a>
+  </div>
+
+  <div class="predictiveSearch" *ngIf="isSearchActive">
+    <div class="predictive-options predictive-teams" *ngIf="searchForm.value.searchCategory === 'teams'">
+      <span *ngFor="let team of filteredTeams" (click)="selectSuggestion(team)">
+        {{team}}
+      </span>
+    </div>
+    <div class="predictive-options predictive-players" *ngIf="searchForm.value.searchCategory === 'players'">
+      <span *ngFor="let player of filteredPlayers" (click)="selectSuggestion(player)">
+        {{player}}
+      </span>
+    </div>
+  </div>
 </div>
+
