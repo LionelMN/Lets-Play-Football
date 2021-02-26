@@ -23,6 +23,7 @@ import { PlayersComponent } from './pages/players/players.component';
 import { NewPlayerComponent } from './pages/new-player/new-player.component';
 import { NewTeamComponent } from './pages/new-team/new-team.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
+import { SearchbarComponent } from './components/searchbar/searchbar.component';
 
 
 registerLocaleData(en);
@@ -38,7 +39,8 @@ registerLocaleData(en);
     PlayersComponent,
     NewPlayerComponent,
     NewTeamComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    SearchbarComponent
   ],
   imports: [
     BrowserModule,
