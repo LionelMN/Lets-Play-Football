@@ -12,6 +12,15 @@
 
 <div class="view-container"  *ngIf="showContent">
   <div class="player-banner">
-    <img [src]="player.Avatar" [alt]="player['Nombre del Jugador']">
+    <div class="avatar">
+      <img [src]="player.Avatar" [alt]="player['Nombre del Jugador']">
+    </div>
+    <span class="team">
+      {{team['Nombre del equipo']}}
+    </span>
+  </div>
+
+  <div class="otherButtons">
+    <a routerLink="/edit/editPlayer/{{playerName}}">Edit player</a>
   </div>
 </div>

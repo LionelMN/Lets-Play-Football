@@ -1,0 +1,32 @@
+<span class="whereIAm">
+  <a routerLink="/players">
+      Players
+  </a>
+  >
+  <a routerLink="/teams/{{defaultPlayerName}}">
+    {{defaultPlayerName}}
+  </a>
+  >
+  Edit
+</span>
+
+<h1>Edit Player</h1>
+
+<div class="spinner-container" *ngIf="!showContent">
+  <app-spinner></app-spinner>
+</div>
+
+<div class="form-container" *ngIf="showContent">
+  <form [formGroup]="playerForm" class="table-row" (ngSubmit)="onSaveForm()">
+    <div class="column"><input type="text" formControlName="Nombre del Jugador" placeholder="Nombre del equipo"></div>
+    <div class="column">
+      <select formControlName="teamId">
+        <option [value]="defaultTeam.id" *ngIf="defaultTeam" class="defaultTeam" selected="selected">{{defaultTeam["Nombre del equipo"]}}</option>
+        <option *ngFor="let team of teams" [value]="team.id">{{team['Nombre del equipo']}}</option>
+      </select>
+    </div>
+    <div class="column"><input type="text" formControlName="Avatar" placeholder="Avatar"></div>
+    <div class="column"><button type="submit" class="btn-send" [disabled]="!playerForm.valid">Send</button></div>
+  </form>
+</div>
+

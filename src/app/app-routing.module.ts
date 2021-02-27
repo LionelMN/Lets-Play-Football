@@ -9,6 +9,7 @@ import { PlayersComponent } from './pages/players/players.component';
 import { NewPlayerComponent } from './pages/new-player/new-player.component';
 import { NewTeamComponent } from './pages/new-team/new-team.component';
 import { EditTeamComponent } from './pages/edit-team/edit-team.component';
+import { EditPlayerComponent } from './pages/edit-player/edit-player.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/welcome' },
@@ -23,7 +24,8 @@ const routes: Routes = [
   { path: 'players/:playerName', component: IndividualPlayerComponent},
   { path: 'new/addPlayer', component: NewPlayerComponent},
   { path: 'new/addTeam', component: NewTeamComponent},
-  { path: 'edit/editTeam/:teamName', component: EditTeamComponent}
+  { path: 'edit/editTeam/:teamName', component: EditTeamComponent},
+  { path: 'edit/editPlayer/:playerName', component: EditPlayerComponent},
 ];
 
 @NgModule({
