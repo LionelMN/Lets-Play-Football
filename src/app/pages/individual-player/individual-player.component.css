@@ -9,22 +9,29 @@ h1{
   text-align: center;
 }
 
+.view-container{
+  display: grid;
+}
 
 .player-banner {
   font-size: 15px;
   text-align: center;
-  color: white;
-  height: 6.5rem;
-  width: 90%;
+  width: 100%;
   margin: 0.5rem 0;
+  display: grid;
+  grid-template-rows: 90% 10%;
   justify-items: center;
   align-items: center;
   transition: 1s;
+}
+
+.avatar{
+  align-self: end;
 }
 
 
 .otherButtons{
   text-align: center;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 100%;
 }

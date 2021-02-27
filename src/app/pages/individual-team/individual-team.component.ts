@@ -47,4 +47,11 @@ export class IndividualTeamComponent implements OnInit {
     this.getOneTeam()
   }
 
+  ngDoCheck() :void {
+    if (this.teamName !== this.route.snapshot.paramMap.get('teamName')){
+      this.teamName = this.route.snapshot.paramMap.get('teamName')
+      this.getOneTeam();
+    }
+  }
+
 }
